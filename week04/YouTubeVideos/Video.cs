@@ -20,14 +20,17 @@ public class Video
     }
     public void DisplayVideo()
     {
-        Console.WriteLine($"Title: {_title}\nAuthor: {_author}\nDuration: {_length} seconds");
+        Console.WriteLine("\nVideo");
+        Console.WriteLine($"Title: {_title}|Author: {_author}|Duration: {_length} seconds\n");
+        Console.WriteLine($"The number of comments is {NumberOfComments()}");
+        Console.WriteLine("Comments\n");
         foreach (Comment comment in _comments)
         {
             comment.DisplayComment();
         }
     }
-    public void NumberOfComments()
+    public int NumberOfComments()
     {
-        Console.WriteLine($"The number of comments is {_comments.Count}");
+       return _comments.Count;
     }
 }
